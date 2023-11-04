@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".MainActivity">
+
+    <soup.neumorphism.NeumorphTextView
+        android:id="@+id/neumorphTextView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20sp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="192dp"
+        android:shadowColor="#34466C"
+        android:text="Stop Watch"
+        android:textColor="#34466C"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:neumorph_shadowColorDark="@color/material_dynamic_primary90" />
+
+    <soup.neumorphism.NeumorphFloatingActionButton
+        android:id="@+id/neumorphFloatingActionButton3"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="132dp"
+        android:layout_marginEnd="55dp"
+        android:background="@android:color/transparent"
+        android:padding="10dp"
+        android:src="@drawable/clock_bgrm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/timerTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="00:00:00"
+        android:textAlignment="center"
+        android:textColor="#34466C"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/neumorphFloatingActionButton3"
+        app:layout_constraintEnd_toEndOf="@+id/neumorphFloatingActionButton3"
+        app:layout_constraintStart_toStartOf="@+id/neumorphFloatingActionButton3"
+        app:layout_constraintTop_toTopOf="@+id/neumorphFloatingActionButton3" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="144dp"
+        android:layout_marginBottom="143dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timerTv">
+
+        <soup.neumorphism.NeumorphFloatingActionButton
+            android:id="@+id/stopBt"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:padding="30dp"
+            android:onClick="onStop"
+            android:src="@drawable/baseline_stop_24" />
+
+        <soup.neumorphism.NeumorphFloatingActionButton
+            android:id="@+id/startBt"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:padding="30dp"
+            android:onClick="onStart"
+            android:src="@drawable/baseline_play_arrow_24" />
+
+        <soup.neumorphism.NeumorphFloatingActionButton
+            android:id="@+id/restartBt"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:padding="30dp"
+            android:onClick="onReset"
+            android:src="@drawable/baseline_replay_24" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
